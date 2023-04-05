@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": "^8.2.0",
+        "illuminate/database": "^8.83",
         "illuminate/mail": "^8.0",
         "laravel-notification-channels/pusher-push-notifications": "^2.3",
         "laravel/lumen-framework": "^8.2.4",
