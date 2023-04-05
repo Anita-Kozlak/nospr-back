@@ -24,4 +24,4 @@ define('ROOT_PATH', dirname(__DIR__));
 |
 */
 
-// $app->run();
+$app->run();
