@@ -1,12 +1,18 @@
 <?php
 
-$url = getenv('JAWSDB_URL');
-$dbparts = parse_url($url);
+if (!empty(getenv('JAWSDB_URL'))) {
+    $env = parse_url(getenv('JAWSDB_URL'));
 
-$hostname = $dbparts['host'];
-$username = $dbparts['user'];
-$password = $dbparts['pass'];
-$database = ltrim($dbparts['path'],'/');
+    putenv(sprintf('DB_HOST=%s', $env['host']));
+    if (array_key_exists('port', $env)) {
+        putenv(sprintf('DB_PORT=%s', $env['port']));
+    }
+    putenv(sprintf('DB_USER=%s', $env['user']));
+    putenv(sprintf('DB_PASSWORD=%s', $env['pass']));
+    putenv(sprintf('DB_NAME=%s', ltrim($env['path'], '/')));
+
+    unset($env);
+}
 
 /*
 |--------------------------------------------------------------------------
