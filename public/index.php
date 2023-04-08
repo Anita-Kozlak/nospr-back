@@ -16,6 +16,10 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
+     echo "<br>Hostname: " . $hostname;
+    echo "<br>Database: " . $database;
+    echo "<br>Username: " . $username;
+    echo "<br>Password: " . $password;
 }
 catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
