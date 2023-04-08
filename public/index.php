@@ -7,6 +7,7 @@ $hostname = $dbparts['host'];
 $username = $dbparts['user'];
 $password = $dbparts['pass'];
 $database = ltrim($dbparts['path'],'/');
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -17,7 +18,17 @@ $database = ltrim($dbparts['path'],'/');
 | is ready to receive HTTP / Console requests from the environment.
 |
 */
+
 $app = require __DIR__.'/../bootstrap/app.php';
+
+// Set the database configuration
+
+try {
+    $pdo = new PDO("mysql:host={$hostname};dbname={$database}", $username, $password);
+} catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+
 define('ROOT_PATH', dirname(__DIR__));
 
 /*
