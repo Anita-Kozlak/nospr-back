@@ -3,7 +3,7 @@
         'name' => 'laravel/lumen',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'ad7e4b4e9353ba2cdae80c0c6824ca9cf0c63efd',
+        'reference' => '0ac759d9651c9752a86d81925988eca61ded72ed',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -420,7 +420,7 @@
         'laravel/lumen' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'ad7e4b4e9353ba2cdae80c0c6824ca9cf0c63efd',
+            'reference' => '0ac759d9651c9752a86d81925988eca61ded72ed',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
