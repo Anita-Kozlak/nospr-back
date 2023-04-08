@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
-header("Access-Control-Allow-Headers: Origin, Content-Type, Authorization");
+header("Access-Control-Allow-Headers: Origin, Content-Type, Authorization, access-control-allow-origin");
 
 $url = getenv('JAWSDB_URL');
 $dbparts = parse_url($url);
@@ -16,9 +16,8 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
-    }
-catch(PDOException $e)
-    {
+}
+catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
-    }
+}
 ?>

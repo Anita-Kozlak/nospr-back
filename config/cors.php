@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'allow_origins' => ['*'],
+    'allow_headers' => ['*', 'Access-Control-Allow-Origin'],
 
     /*
     |--------------------------------------------------------------------------
@@ -23,7 +23,7 @@ return [
     |
     */
 
-    'allow_headers' => ['*'],
+    'allow_headers' => ['*', 'Access-Control-Allow-Origin'],
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     |
     */
 
-    'allow_methods' => ['*'],
+    'allow_headers' => ['*', 'Access-Control-Allow-Origin'],
 
     /*
     |--------------------------------------------------------------------------
